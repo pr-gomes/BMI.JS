@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title> Calculadora IMC </title>
+
+    <link rel="shortcut icon" href="./img/imc.png" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <form id="form">
+            <div class="container-mobile">
+            <h1 class="titulo-acad"> BODY POWER FIT GYM </h1>
+            <h1 class="titulo-form"> Calculadora - IMC </h1>
+                <div class="conteudo">
+                    <div class="conteudo-dados">
+                        <label for="ntxt1"> Peso (ex.: 69.5) </label>
+                        <div class="input-conteudo">
+                            <i class="fa-solid fa-weight-hanging"></i>
+                            <input type="text" id="ntxt1" required maxlength="6" oninput="limitador(this)">
+                            <span> Kg </span>
+                        </div>
+
+                        <label for="ntxt2"> Altura (ex.: 1.70) </label>
+                        <div class="input-conteudo">
+                            <i class="fa-solid fa-ruler"></i>
+                            <input type="text" id="ntxt2" step="0.01" required maxlength="6" oninput="limitador(this)">
+                            <span> m </span>
+                        </div>
+
+                        <div class="input-btn">
+                            <button id="calc"> Calcular
+                            </button>
+                            <button id="reset"> Limpar </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="infos" class="hidden">
+            <h1> Resultado </h1>
+            <div id="result">
+                <div id="bmi">
+                    <span id="value"></span>
+                    <span> Seu IMC </span>
+                </div>
+                <div id="description">
+                    <span> 55 </span>
+                </div>
+            </div>
+
+            <div class="info-imc">
+                <a
+                    href="https://www.saude.rj.gov.br/obesidade/noticias/2019/03/imc-voce-sabe-o-que-o-indice-de-massa-corporal-diz-sobre-sua-saude">
+                    Saiba mais sobre IMC <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape">
+        <img class="imagem__paulologo" src="/img/logopaulo.png" alt="logotipo paulo ricardo">
+        <p class="copyright">&copy; Desenvolvido por Paulo Ricardo - 2023 </p>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
